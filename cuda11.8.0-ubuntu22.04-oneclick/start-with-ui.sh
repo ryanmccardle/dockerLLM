@@ -39,6 +39,9 @@ cd /workspace/text-generation-webui && git pull
 # Update exllama to the latest commit
 cd /workspace/text-generation-webui/repositories/exllama && git pull
 
+# Install sillytavern extras
+"$SCRIPTDIR"/sillytavern-extras.sh
+
 # Move the script that launches text-gen to $VOLUME, so users can make persistent changes to CLI arguments
 if [[ ! -f $VOLUME/run-text-generation-webui.sh ]]; then
 	mv "$SCRIPTDIR"/run-text-generation-webui.sh $VOLUME/run-text-generation-webui.sh
